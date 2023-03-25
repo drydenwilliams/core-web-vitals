@@ -31,12 +31,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      defer
-      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
-      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
-      crossorigin="anonymous"
-    ></script>
 
     <script
       defer
@@ -854,20 +848,8 @@
   <script>
     // To ensure that jQuery is loaded as we've now deferred it
     window.onload = function () {
-      $("figure").hover(
-        function () {
-          $(this).find("img").css("transform", "scale(1.05)");
-        },
-        function () {
-          $(this).find("img").css("transform", "scale(1)");
-        }
-      );
-
-      $("#copyrightYear").text(moment().year());
-
-      setTimeout(() => {
-        $(".section-text").css("top", "calc(50% - 5vh)");
-      }, 2000);
+      const copyrightYearEl = document.getElementById("copyrightYear");
+      copyrightYearEl.innerHTML = moment().year();
 
       setTimeout(() => {
         const adBannerEl = document.getElementById("adBanner");

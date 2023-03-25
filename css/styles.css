@@ -72,6 +72,10 @@ img {
   transition: 0.3s ease-in-out;
 }
 
+.hover-zoom img:hover {
+  transform: scale(1.05);
+}
+
 .container {
   width: 100%;
   padding-right: calc(20px * 0.5);
