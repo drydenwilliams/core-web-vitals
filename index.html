@@ -880,43 +880,40 @@
   <script>
     // To ensure that jQuery is loaded as we've now deferred it
     window.onload = function () {
-      $(function () {
-        $("figure").hover(
-          function () {
-            $(this).find("img").css("transform", "scale(1.05)");
-          },
-          function () {
-            $(this).find("img").css("transform", "scale(1)");
-          }
-        );
-        const cookieActions = document.querySelectorAll(".cookie-action");
-        console.log("cookieActions", cookieActions);
-        cookieActions.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const adBannerEl = document.getElementById("cookieBanner");
-            adBannerEl.style.display = "none";
-          });
-        });
-        $("#copyrightYear").text(moment().year());
-        setTimeout(() => {
-          $(".section-text").css("top", "calc(50% - 5vh)");
-        }, 2000);
-        setTimeout(() => {
+      $("figure").hover(
+        function () {
+          $(this).find("img").css("transform", "scale(1.05)");
+        },
+        function () {
+          $(this).find("img").css("transform", "scale(1)");
+        }
+      );
+      const cookieActions = document.querySelectorAll(".cookie-action");
+      console.log("cookieActions", cookieActions);
+      cookieActions.forEach((btn) => {
+        btn.addEventListener("click", () => {
           const adBannerEl = document.getElementById("cookieBanner");
-          adBannerEl.style.display = "block";
-        }, 1500);
-        setTimeout(() => {
-          const adBannerEl = document.getElementById("adBanner");
-          adBannerEl.style.display = "block";
-          adBannerEl.style.backgroundColor = "#f8cb70";
-          adBannerEl.style.textAlign = "center";
-          adBannerEl.style.width = "600px";
-          adBannerEl.style.height = "100px";
-          adBannerEl.style.margin = "30px auto";
-          adBannerEl.innerHTML = "Lorem Ipsum";
-        }, 500);
+          adBannerEl.style.display = "none";
+        });
       });
-      alert("Yeah!");
+      $("#copyrightYear").text(moment().year());
+      setTimeout(() => {
+        $(".section-text").css("top", "calc(50% - 5vh)");
+      }, 2000);
+      setTimeout(() => {
+        const adBannerEl = document.getElementById("cookieBanner");
+        adBannerEl.style.display = "block";
+      }, 1500);
+      setTimeout(() => {
+        const adBannerEl = document.getElementById("adBanner");
+        adBannerEl.style.display = "block";
+        adBannerEl.style.backgroundColor = "#f8cb70";
+        adBannerEl.style.textAlign = "center";
+        adBannerEl.style.width = "600px";
+        adBannerEl.style.height = "100px";
+        adBannerEl.style.margin = "30px auto";
+        adBannerEl.innerHTML = "Lorem Ipsum";
+      }, 500);
     };
   </script>
 </html>
