@@ -25,12 +25,6 @@
       data-domain="drydenwilliams.github.io/core-web-vitals"
       src="https://plausible.io/js/script.js"
     ></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
     <script
       defer
@@ -830,7 +824,7 @@
     // To ensure that jQuery is loaded as we've now deferred it
     window.onload = function () {
       const copyrightYearEl = document.getElementById("copyrightYear");
-      copyrightYearEl.innerHTML = moment().year();
+      copyrightYearEl.innerHTML = new Date().getFullYear();
 
       const gliderStyles = document.createElement("link");
       gliderStyles.setAttribute("rel", "stylesheet");
